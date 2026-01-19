@@ -33,11 +33,14 @@ nav a {
   color: #fff;
   text-decoration: none;
   margin-left: 20px;
-  transition: color 0.3s ease;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.15s ease; 
 }
 
 nav a:hover {
-  color: #ccc; /* Barva při najetí myší */
+  color: #99ccff;
+  border-bottom-color: #99ccff;
+  border-bottom-width: 1px;
 }
 
 /* ================================
