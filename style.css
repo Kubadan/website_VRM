@@ -2,7 +2,7 @@
    ZÁKLADNÍ STYLY
    ================================ */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Rubik', serif;
   margin: 0;
   padding: 0;
   color: #000; /* Výchozí barva textu */
@@ -46,18 +46,19 @@ nav a:hover {
 /* ================================
    HERO SEKCE
    ================================ */
-.hero {
+   
+.hero-content {
   text-align: center;
   padding: 100px 20px;
   background-color: #e0e0e0; /* Neutrální pozadí */
 }
 
-.hero h1 {
+.hero-content h1 {
   font-size: 2.5rem;
   margin-bottom: 15px;
 }
 
-.hero p {
+.hero-content p {
   font-size: 1.1rem;
   margin-bottom: 30px;
 }
@@ -230,8 +231,7 @@ footer {
 /* ================================
    POZNÁMKY PRO ÚPRAVY (v češtině)
    ================================
-   1. Barvy: Upravit background-color a barvy tlačítek podle značky.
-   2. Fonty: Změnit font-family, pokud je potřeba.
+   1. Barvy: Upravit background-color a barvy tlačítek podle značky.  
    3. Vzdálenosti: Upravit padding u sekcí pro více/méně prostoru.
    4. Šířka karet: Změnit šířku .card nebo flex-wrap pro změnu rozložení.
    5. Hero sekce: Přidat background-image pro obrázek na pozadí.
