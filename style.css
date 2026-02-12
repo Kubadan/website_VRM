@@ -10,6 +10,10 @@ body {
   line-height: 1.6;
 }
 
+:root {
+  --background-bg: #00378A; /* Tmavější modrá pro pozadí menších sekcí */
+}
+
 /* ================================
    HLAVIČKA
    ================================ */
@@ -18,14 +22,14 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px 10%;
-  background-color: #333; /* Neutrální tmavá barva */
+  background-color: var(--background-bg); /* Použití proměnné pro barvu hlavičky */
   position: sticky;
   top: 0;
   z-index: 100;
 }
 
 header img.logo {
-  max-height: 50px; /* Velikost loga */
+  max-height: 80px; /* Velikost loga */
   margin-right: auto;
 }
 
@@ -101,7 +105,7 @@ nav a:hover {
 
 .btn {
   display: inline-block;
-  background-color: #333;
+  background-color: var(--background-bg);
   color: #fff;
   padding: 12px 30px;
   border-radius: 25px;
@@ -111,7 +115,7 @@ nav a:hover {
 }
 
 .btn:hover {
-  background-color: #555;
+  background-color: #002a66; /* Tmavší modrá při hoveru */
   color: #fff;
 }
 
@@ -149,7 +153,7 @@ section {
 }
 
 .services ul li {
-  margin-bottom: 10px;
+  margin-bottom: 3px;
 }
 
 /* PRODUKT */
@@ -237,7 +241,7 @@ section {
 
 .contact-form button {
   align-self: center;
-  background-color: #333;
+  background-color: var(--background-bg);
   color: #fff;
   border: none;
   padding: 12px 25px;
@@ -247,7 +251,7 @@ section {
 }
 
 .contact-form button:hover {
-  background-color: #555;
+  background-color: #014cbc;
 }
 
 .contact-form input::placeholder,
@@ -259,7 +263,7 @@ section {
 footer {
   text-align: center;
   padding: 20px;
-  background-color: #333;
+  background-color: var(--background-bg);
   color: #fff;
   font-size: 0.9rem;
 }
@@ -267,10 +271,8 @@ footer {
 /* ================================
    POZNÁMKY PRO ÚPRAVY (v češtině)
    ================================
-   1. Barvy: Upravit background-color a barvy tlačítek podle značky.  
    3. Vzdálenosti: Upravit padding u sekcí pro více/méně prostoru.
    4. Šířka karet: Změnit šířku .card nebo flex-wrap pro změnu rozložení.
-   5. Hero sekce: Přidat background-image pro obrázek na pozadí.
    6. Tlačítka: Upravit hover/focus barvy pro lepší UX.
    7. FAQ: Přidat JS pro rozbalovací efekt pro lepší prezentaci.
    8. Logo: Upravit velikost obrázku logo v headeru.
