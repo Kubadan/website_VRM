@@ -5,8 +5,8 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
-  color: #000; /* Výchozí barva textu */
-  background-color: #f5f5f5; /* Neutrální pozadí */
+  color: #000; 
+  background-color: #f5f5f5; 
   line-height: 1.6;
 }
 
