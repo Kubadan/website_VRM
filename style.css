@@ -2,7 +2,7 @@
    ZÁKLADNÍ STYLY
    ================================ */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Rubik', sans-serif;
   margin: 0;
   padding: 0;
   color: #000; 
@@ -46,20 +46,57 @@ nav a:hover {
 /* ================================
    HERO SEKCE
    ================================ */
+
 .hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+   
+.hero-content {
   text-align: center;
   padding: 100px 20px;
-  background-color: #e0e0e0; /* Neutrální pozadí */
+  position: relative;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  max-width: 600px;
 }
 
-.hero h1 {
+.hero-content h1 {
   font-size: 2.5rem;
   margin-bottom: 15px;
+  color: #fff;
 }
 
-.hero p {
+.hero-content p {
   font-size: 1.1rem;
   margin-bottom: 30px;
+  color: #fff;
 }
 
 .btn {
@@ -230,8 +267,7 @@ footer {
 /* ================================
    POZNÁMKY PRO ÚPRAVY (v češtině)
    ================================
-   1. Barvy: Upravit background-color a barvy tlačítek podle značky.
-   2. Fonty: Změnit font-family, pokud je potřeba.
+   1. Barvy: Upravit background-color a barvy tlačítek podle značky.  
    3. Vzdálenosti: Upravit padding u sekcí pro více/méně prostoru.
    4. Šířka karet: Změnit šířku .card nebo flex-wrap pro změnu rozložení.
    5. Hero sekce: Přidat background-image pro obrázek na pozadí.
