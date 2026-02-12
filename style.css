@@ -1,227 +1,256 @@
-/* ================================
-   ZÁKLADNÍ STYLY
-   ================================ */
+:root {
+  --bg-main: #f5f5f5;
+  --bg-light: #f0f0f0;
+  --bg-dark: #333;
+  --accent: #99ccff;
+  --text-dark: #000;
+  --text-light: #fff;
+  --radius: 12px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: 'Rubik', sans-serif;
   margin: 0;
-  padding: 0;
-  color: #000; 
-  background-color: #f5f5f5; 
+  font-family: 'Rubik', sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-dark);
   line-height: 1.6;
 }
 
-/* ================================
-   HLAVIČKA
-   ================================ */
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 10%;
-  background-color: #333; /* Neutrální tmavá barva */
   position: sticky;
   top: 0;
   z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 10%;
+  background-color: var(--bg-dark);
 }
 
-header img.logo {
-  max-height: 50px; /* Velikost loga */
-  margin-right: auto;
+header .logo {
+  max-height: 50px;
 }
 
 nav a {
-  color: #fff;
+  color: var(--text-light);
   text-decoration: none;
   margin-left: 20px;
+  padding-bottom: 2px;
   border-bottom: 2px solid transparent;
-  transition: border-color 0.15s ease; 
+  transition: color 0.2s ease, border-color 0.2s ease;
 }
 
 nav a:hover {
-  color: #99ccff;
-  border-bottom-color: #99ccff;
-  border-bottom-width: 1px;
+  color: var(--accent);
+  border-bottom-color: var(--accent);
 }
 
-/* ================================
-   HERO SEKCE
-   ================================ */
+main {
+  width: 100%;
+  overflow-x: hidden;
+}
 
 .hero {
   position: relative;
-  overflow: hidden;
   min-height: 600px;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .hero::before {
-  content: '';
+  content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
   z-index: 1;
 }
 
 .hero-video {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: 1;
+  z-index: 0;
 }
-   
+
 .hero-content {
-  text-align: center;
-  padding: 100px 20px;
   position: relative;
   z-index: 2;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 10px;
-  max-width: 600px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.55);
+  padding: 60px 40px;
+  border-radius: var(--radius);
+  max-width: 650px;
 }
 
 .hero-content h1 {
+  color: var(--text-light);
   font-size: 2.5rem;
   margin-bottom: 15px;
-  color: #fff;
 }
 
 .hero-content p {
+  color: var(--text-light);
   font-size: 1.1rem;
   margin-bottom: 30px;
-  color: #fff;
 }
 
 .btn {
   display: inline-block;
-  background-color: #333;
-  color: #fff;
   padding: 12px 30px;
-  border-radius: 25px;
+  border-radius: 999px;
+  background-color: var(--bg-dark);
+  color: var(--text-light);
   text-decoration: none;
-  font-weight: bold;
-  transition: all 0.3s ease;
+  font-weight: 500;
+  transition: background-color 0.25s ease, transform 0.25s ease;
 }
 
 .btn:hover {
   background-color: #555;
-  color: #fff;
+  transform: translateY(-2px);
 }
 
-/* ================================
-   SEKCE
-   ================================ */
 section {
   padding: 80px 10%;
 }
 
-/* O NÁS */
 #about {
+  background-color: var(--bg-light);
   text-align: center;
-  background-color: #f0f0f0;
 }
 
 #about ul {
   list-style: none;
   padding: 0;
+  margin-top: 30px;
 }
 
-#about ul li {
+#about li {
   margin: 10px 0;
 }
 
-/* SLUŽBY */
 .services {
-  text-align: left;
   background-color: #e8e8e8;
 }
 
 .services ul {
   list-style: disc inside;
-  padding-left: 0;
+  margin-top: 20px;
 }
 
-.services ul li {
+.services li {
   margin-bottom: 10px;
 }
 
-/* PRODUKT */
 .product {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  background-color: #f5f5f5;
+  align-items: center;
+  gap: 40px;
+  background-color: var(--bg-main);
 }
 
-.product video {
-  max-width: 100%;
-  border-radius: 10px;
+.product-visual {
+  width: 400px;
+  height: 400px;
+  background: #ddd;
+  border-radius: var(--radius);
+  flex-shrink: 0;
 }
 
-/* KARTY (volitelné pro produkty) */
-.card {
-  background-color: #fff;
-  border-radius: 10px;
-  padding: 20px;
-  width: 250px;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.product-info {
+  max-width: 500px;
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+.product-info ul {
+  margin-top: 20px;
+  padding-left: 20px;
 }
 
-/* FAQ */
-.faq {
-  text-align: left;
-  background-color: #f0f0f0;
+.advantages {
+  background-color: var(--bg-light);
 }
 
-.faq .question {
-  background-color: #fff;
-  margin: 15px auto;
-  padding: 20px;
-  border-radius: 8px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  max-width: 800px;
+.advantages ul {
+  margin-top: 20px;
+  padding-left: 20px;
 }
 
-.faq .question:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-.faq h2 {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-/* KONTAKT */
-.contact {
+.references {
   text-align: center;
   background-color: #e8e8e8;
 }
 
+.client-logos {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.client-logos img {
+  max-height: 60px;
+  opacity: 0.8;
+}
+
+.certifications {
+  background-color: var(--bg-light);
+}
+
+.certifications ul {
+  margin-top: 20px;
+  padding-left: 20px;
+}
+
+.faq {
+  background-color: #e8e8e8;
+}
+
+.faq h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.question {
+  background-color: var(--text-light);
+  padding: 20px;
+  border-radius: var(--radius);
+  max-width: 800px;
+  margin: 15px auto;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.question:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.contact {
+  text-align: center;
+  background-color: var(--bg-light);
+}
+
 .contact-form {
+  max-width: 500px;
+  margin: 0 auto 30px;
   display: flex;
   flex-direction: column;
-  max-width: 500px;
-  margin: 0 auto 30px auto;
 }
 
 .contact-form label {
   text-align: left;
-  margin: 10px 0 5px 0;
+  margin: 10px 0 5px;
 }
 
 .contact-form input,
@@ -229,49 +258,54 @@ section {
   padding: 12px;
   border-radius: 8px;
   border: 1px solid #ccc;
-  margin-bottom: 15px;
+  font-family: inherit;
   font-size: 1rem;
-  width: 100%;
-  box-sizing: border-box;
 }
 
 .contact-form button {
+  margin-top: 20px;
   align-self: center;
-  background-color: #333;
-  color: #fff;
   border: none;
-  padding: 12px 25px;
-  border-radius: 25px;
   cursor: pointer;
-  transition: all 0.3s ease;
 }
 
-.contact-form button:hover {
-  background-color: #555;
-}
-
-.contact-form input::placeholder,
-.contact-form textarea::placeholder {
-  color: #999;
-}
-
-/* PATIČKA */
 footer {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
   text-align: center;
   padding: 20px;
-  background-color: #333;
-  color: #fff;
   font-size: 0.9rem;
 }
 
-/* ================================
-   POZNÁMKY PRO ÚPRAVY (v češtině)
-   ================================
-   1. Barvy: Upravit background-color a barvy tlačítek podle značky.  
-   3. Vzdálenosti: Upravit padding u sekcí pro více/méně prostoru.
-   4. Šířka karet: Změnit šířku .card nebo flex-wrap pro změnu rozložení.
-   5. Hero sekce: Přidat background-image pro obrázek na pozadí.
-   6. Tlačítka: Upravit hover/focus barvy pro lepší UX.
-   7. FAQ: Přidat JS pro rozbalovací efekt pro lepší prezentaci.
-   8. Logo: Upravit velikost obrázku logo v headeru.
-   ================================ */
+@media (max-width: 900px) {
+  header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  nav a {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .product {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .product-visual {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 600px) {
+  section {
+    padding: 60px 6%;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+}
+

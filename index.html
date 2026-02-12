@@ -1,17 +1,25 @@
 <!DOCTYPE html>
-
 <html lang="cs">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>VRM – Virtual Retrieval Machine</title>
+  <meta name="description" content="Virtual Retrieval Machine – inteligentní automatizované řešení pro správu ztrát a nálezů.">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
+  <!-- ================= HEADER ================= -->
   <header>
     <img src="logo.png" alt="VRM logo" class="logo">
+
     <nav>
       <a href="#home">Domů</a>
       <a href="#about">O nás</a>
@@ -22,156 +30,165 @@
     </nav>
   </header>
 
-  <!-- HERO SEKCE -->
+  <!-- ================= MAIN ================= -->
+  <main>
 
-  <section id="home" class="hero">
-    <video class="hero-video" autoplay muted loop>
-      <source src="hero.mp4" type="video/mp4">
-      Váš prohlížeč nepodporuje přehrávání videa.
-    </video>
-    <div class="hero-content">
-      <h1>Moderní doba vyžaduje moderní řešení</h1>
-      <p>Vyvíjíme inteligentní automatizované systémy se zaměřením na efektivní správu ztrát a nálezů.</p>
-      <a href="#contact" class="btn">Kontaktujte nás</a>
-    </div>
-  </section>
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <video class="hero-video" autoplay muted loop playsinline preload="metadata">
+        <source src="hero.mp4" type="video/mp4">
+        Váš prohlížeč nepodporuje přehrávání videa.
+      </video>
 
-  <!-- O NÁS -->
+      <div class="hero-content">
+        <h1>Moderní doba vyžaduje moderní řešení</h1>
+        <p>
+          Vyvíjíme inteligentní automatizované systémy se zaměřením
+          na efektivní správu ztrát a nálezů.
+        </p>
+        <a href="#contact" class="btn">Kontaktujte nás</a>
+      </div>
+    </section>
 
-  <section id="about">
-    <h2>O nás</h2>
-    <p>
-      Jsme tým zkušených designérů, vývojářů a technických specialistů, kteří přinášejí inovativní a spolehlivá
-      řešení pro moderní firmy i instituce. Naším cílem je zjednodušit procesy, zvýšit bezpečnost a zlepšit uživatelský komfort.
-    </p>
-    <ul>
-      <li>Více než 5 let zkušeností v oblasti automatizace</li>
-      <li>Individuální přístup ke každému klientovi</li>
-      <li>Důraz na kvalitu, bezpečnost a dlouhodobou spolehlivost</li>
-    </ul>
-  </section>
+    <!-- O NÁS -->
+    <section id="about">
+      <h2>O nás</h2>
+      <p>
+        Jsme tým zkušených designérů, vývojářů a technických specialistů,
+        kteří přinášejí inovativní a spolehlivá řešení pro moderní firmy
+        i instituce.
+      </p>
 
-  <!-- SLUŽBY -->
+      <ul>
+        <li>Více než 5 let zkušeností v oblasti automatizace</li>
+        <li>Individuální přístup ke každému klientovi</li>
+        <li>Důraz na kvalitu, bezpečnost a dlouhodobou spolehlivost</li>
+      </ul>
+    </section>
 
-  <section id="services" class="services">
-    <h2>Naše služby</h2>
-    <ul>
-      <li>Návrh a vývoj automatizovaných zařízení na míru</li>
-      <li>Instalace a uvedení do provozu</li>
-      <li>Integrace se stávajícími systémy</li>
-      <li>Technická podpora a pravidelný servis</li>
-      <li>Konzultace a optimalizace procesů</li>
-    </ul>
-  </section>
+    <!-- SLUŽBY -->
+    <section id="services" class="services">
+      <h2>Naše služby</h2>
+      <ul>
+        <li>Návrh a vývoj automatizovaných zařízení na míru</li>
+        <li>Instalace a uvedení do provozu</li>
+        <li>Integrace se stávajícími systémy</li>
+        <li>Technická podpora a pravidelný servis</li>
+        <li>Konzultace a optimalizace procesů</li>
+      </ul>
+    </section>
 
-  <!-- PRODUKT -->
+    <!-- PRODUKT -->
+    <section id="product" class="product">
+      <div class="product-visual" id="vrm-3d">
+        <!-- ZDE BUDE 3D MODEL (Three.js / model-viewer) -->
+      </div>
 
-  <section id="product" class="product">
-    <h2>Představujeme náš hlavní produkt</h2>
-    <p>
-      Virtual Retrieval Machine (VRM) je moderní samoobslužný automat určený pro efektivní evidenci a výdej nalezených předmětů.
-      Zařízení minimalizuje administrativní zátěž a zajišťuje maximální bezpečnost uložených položek.
-    </p>
+      <div class="product-info">
+        <h2>Virtual Retrieval Machine</h2>
+        <p>
+          VRM je moderní samoobslužný automat určený pro efektivní evidenci
+          a výdej nalezených předmětů. Minimalizuje administrativní zátěž
+          a zajišťuje maximální bezpečnost uložených položek.
+        </p>
 
-```
-<video controls loop>
-  <source src="" type="video/mp4">
-  Váš prohlížeč nepodporuje přehrávání videa.
-</video>
+        <ul>
+          <li>Plně automatizovaný provoz</li>
+          <li>Intuitivní dotykové ovládání</li>
+          <li>Bezpečné uložení předmětů</li>
+          <li>Vzdálená správa a monitoring</li>
+        </ul>
+      </div>
+    </section>
 
-<ul>
-  <li>Plně automatizovaný provoz</li>
-  <li>Intuitivní dotykové ovládání</li>
-  <li>Bezpečné uložení předmětů</li>
-  <li>Možnost vzdálené správy a monitoringu</li>
-</ul>
-  </section>
+    <!-- VÝHODY -->
+    <section id="advantages" class="advantages">
+      <h2>Proč zvolit VRM?</h2>
+      <ul>
+        <li>Minimum lidského zásahu</li>
+        <li>Vysoká úroveň bezpečnosti a ochrany dat</li>
+        <li>Snadná integrace do stávajících systémů</li>
+        <li>Flexibilní konfigurace</li>
+        <li>Úspora času a zvýšení efektivity</li>
+      </ul>
+    </section>
 
-  <!-- VÝHODY -->
-<section id="advantages" class="advantages">
-  <h2>Proč zvolit VRM?</h2>
-  <ul>
-    <li>Plně automatizovaný provoz s minimem lidského zásahu</li>
-    <li>Bezpečné uložení předmětů a ochrana dat</li>
-    <li>Snadná integrace do stávajících systémů</li>
-    <li>Flexibilní konfigurace dle potřeb klienta</li>
-    <li>Úspora času a zvýšení efektivity</li>
-  </ul>
-</section>
+    <!-- REFERENCE -->
+    <section id="references" class="references">
+      <h2>Naši klienti</h2>
+      <p>
+        Spolupracujeme s letišti, nemocnicemi a velkými firmami
+        po celé České republice.
+      </p>
 
-<!-- REFERENCE -->
-<section id="references" class="references">
-  <h2>Naši spokojení klienti</h2>
-  <p>Spolupracujeme s letišti, nemocnicemi a velkými firmami po celé České republice.</p>
-  <div class="client-logos">
-    <!-- Sem můžeš vložit loga klientů -->
-    <img src="logo-klient1.png" alt="Klient 1">
-    <img src="logo-klient2.png" alt="Klient 2">
-    <img src="logo-klient3.png" alt="Klient 3">
-  </div>
-</section>
+      <div class="client-logos">
+        <img src="logo-klient1.png" alt="Klient 1">
+        <img src="logo-klient2.png" alt="Klient 2">
+        <img src="logo-klient3.png" alt="Klient 3">
+      </div>
+    </section>
 
-<!-- CERTIFIKACE -->
-<section id="certifications" class="certifications">
-  <h2>Certifikace a bezpečnost</h2>
-  <p>Naše produkty splňují všechny normy EU pro bezpečnost a kvalitu. Nabízíme pravidelný servis a aktualizace softwaru pro maximální spolehlivost.</p>
-  <ul>
-    <li>ISO 9001 – management kvality</li>
-    <li>CE certifikace – bezpečnostní normy EU</li>
-    <li>Ochrana dat a GDPR compliant software</li>
-  </ul>
-</section>
+    <!-- CERTIFIKACE -->
+    <section id="certifications" class="certifications">
+      <h2>Certifikace a bezpečnost</h2>
+      <ul>
+        <li>ISO 9001 – management kvality</li>
+        <li>CE certifikace – normy EU</li>
+        <li>GDPR compliant software</li>
+      </ul>
+    </section>
 
-  <!-- FAQ -->
-  <section id="faq" class="faq">
-    <h2>FAQ – Často kladené dotazy</h2>
-<div class="question">
-  <h3>Jak dlouho trvá vývoj zařízení?</h3>
-  <p>Standardní doba vývoje je 2–3 měsíce v závislosti na konkrétních požadavcích klienta.</p>
-</div>
+    <!-- FAQ -->
+    <section id="faq" class="faq">
+      <h2>FAQ – Často kladené dotazy</h2>
 
-<div class="question">
-  <h3>Nabízíte technickou podporu?</h3>
-  <p>Ano, poskytujeme kompletní technickou podporu, pravidelný servis i vzdálenou diagnostiku.</p>
-</div>
+      <div class="question js-faq">
+        <h3>Jak dlouho trvá vývoj zařízení?</h3>
+        <p>Standardně 2–3 měsíce dle specifikace.</p>
+      </div>
 
-<div class="question">
-  <h3>Je možné zařízení přizpůsobit na míru?</h3>
-  <p>Ano, nabízíme několik úrovní přizpůsobení – od softwarových úprav až po design krytu.</p>
-</div>
+      <div class="question js-faq">
+        <h3>Nabízíte technickou podporu?</h3>
+        <p>Ano, včetně vzdálené diagnostiky a servisu.</p>
+      </div>
 
-<div class="question">
-  <h3>Kde lze zařízení využít?</h3>
-  <p>Naše řešení je vhodné pro letiště, nemocnice, obchodní centra, školy i veřejné instituce.</p>
-</div>
-  </section>
+      <div class="question js-faq">
+        <h3>Lze zařízení přizpůsobit?</h3>
+        <p>Ano – software, hardware i design krytu.</p>
+      </div>
+    </section>
 
-  <!-- KONTAKT -->
-  <section id="contact" class="contact">
-    <h2>Kontaktujte nás</h2>
-    <p>Máte zájem o naše řešení nebo potřebujete více informací? Neváhejte nás kontaktovat.</p>
-<form action="#" method="POST" class="contact-form">
-  <label for="name">Jméno a příjmení:</label>
-  <input type="text" id="name" name="name" required>
+    <!-- KONTAKT -->
+    <section id="contact" class="contact">
+      <h2>Kontaktujte nás</h2>
 
-  <label for="email">E-mail:</label>
-  <input type="email" id="email" name="email" required>
+      <form action="#" method="POST" class="contact-form">
+        <label for="name">Jméno a příjmení</label>
+        <input type="text" id="name" name="name" required>
 
-  <label for="message">Zpráva:</label>
-  <textarea id="message" name="message" rows="5" required></textarea>
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" required>
 
-  <button type="submit" class="btn">Odeslat zprávu</button>
-</form>
+        <label for="message">Zpráva</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
 
-<p><strong>Email:</strong> vrmcentral@vrm.cz</p>
-<p><strong>Telefon:</strong> +420 444 444 444</p>
-  </section>
+        <button type="submit" class="btn">Odeslat</button>
+      </form>
 
-  <!-- PATIČKA -->
+      <p><strong>Email:</strong> vrmcentral@vrm.cz</p>
+      <p><strong>Telefon:</strong> +420 444 444 444</p>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
   <footer>
     <p>© 2025 Virtual Retrieval Machine LLC | Všechna práva vyhrazena</p>
   </footer>
+
+  <!-- ================= SCRIPTS ================= -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <script src="animace.js"></script>
+
 </body>
 </html>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-<script src="animace.js"></script>
