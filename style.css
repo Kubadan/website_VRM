@@ -145,9 +145,11 @@ section {
   padding: 80px 10%;
 }
 
+section .references {}
+
 #about {
   background-color: var(--bg-main);
-  text-align: center;
+  text-align: left
 }
 
 #about ul {
@@ -210,19 +212,70 @@ section {
 .references {
   text-align: center;
   background-color: #e8e8e8;
+  padding: 80px 0 0 0;
 }
 
-.client-logos {
+.references h2,
+.references p {
+  padding: 0 10%;
+}
+
+.places-of-interest {
   display: flex;
-  justify-content: center;
-  gap: 40px;
-  margin-top: 30px;
-  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: stretch;
+  align-items: stretch;
+  gap: 0;
+
 }
 
-.client-logos img {
-  max-height: 60px;
+.image-card {
+  position: relative;
+  flex: 1;
+  border-radius: 0;
+  overflow: hidden;
+  
+}
+
+.image-card img {
+  width: 200%;
+  height: 100%;
+  display: block;
   opacity: 0.8;
+  object-fit: cover;
+  transition: opacity 0.25s ease;
+}
+
+.image-card:hover img {
+  opacity: 1;
+}
+
+.image-fade {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60%;
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.6));
+  pointer-events: none;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.image-card:hover .image-fade {
+  opacity: 1;
+}
+
+.image-text {
+  color: var(--text-light);
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 0;
+  pointer-events: auto;
 }
 
 .certifications {
@@ -242,16 +295,17 @@ section {
   text-align: center;
 }
 
-.question {
+.container {
   background-color: var(--text-light);
   padding: 20px;
   border-radius: var(--radius);
   max-width: 800px;
   margin: 15px auto;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
+  scale: inherit;
 }
 
-.question:hover {
+.container:hover {
   transform: translateY(-3px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
